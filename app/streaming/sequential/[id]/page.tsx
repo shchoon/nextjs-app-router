@@ -1,6 +1,3 @@
-import Image from "next/image";
-import User from "@/app/component/user";
-import delay from "@/app/utils/delay";
 import { Params } from "@/app/type";
 import { Suspense } from "react";
 import SearchName from "@/app/component/search";

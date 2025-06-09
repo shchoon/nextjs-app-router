@@ -1,21 +1,6 @@
 import Image from "next/image";
 
 export default async function Detail1() {
-  //   const [data, setData] = useState<any[]>();
-
-  //   const getData = async () => {
-  //     const getData = await fetch("https://dummyjson.com/users?limit=200");
-  //     const data = await getData.json();
-  //     const userData = data.users;
-
-  //     setData(userData);
-  //   };
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       getData();
-  //     }, 2000);
-  //   });
-
   const getData = await fetch("https://dummyjson.com/users?limit=200");
   const data = await getData.json();
   let userData;

@@ -18,7 +18,7 @@ export default async function Search({
 
   return (
     <div className="flex flex-col gap-3">
-      {userData.map((person, i) => {
+      {userData.map((person: any, i: number) => {
         return (
           <div key={person.id}>
             팀원 {i + 1} {title === "이름" ? "이름" : "나이"} :{" "}
