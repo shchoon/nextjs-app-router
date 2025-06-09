@@ -26,15 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col gap-10`}
       >
         <div className="flex gap-10">
           <Link href={"/"}>Home</Link>
           <Link href={"/prefetch"}>Prefetch</Link>
-          {/* <Link href={"/link2"}>Link2</Link>
-          <Link href={"/link3"} prefetch={false}>
-            Link3
-          </Link> */}
+          <Link href={"/streaming"}>Streaming</Link>
         </div>
         {children}
       </body>
