@@ -14,7 +14,7 @@ export default async function Search({
   const data = await getData.json();
   const userData = data.users;
 
-  console.log(data);
+  console.log(name);
 
   return (
     <div className="flex flex-col gap-3">

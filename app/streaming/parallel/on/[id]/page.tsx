@@ -3,7 +3,7 @@ import List from "@/app/component/list";
 import Delay from "@/app/utils/delay";
 
 export default async function ParallelOn({ params }: Params) {
-  const { id } = await params;
+  const { id } = params;
   const getNameList = async () => {
     const getData = await fetch(`https://dummyjson.com/users/${id * 10}`);
     await Delay(1000);

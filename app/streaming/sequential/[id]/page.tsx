@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import SearchName from "@/app/component/search";
 
 export default async function Sequential({ params }: Params) {
-  const { id } = await params;
+  const { id } = params;
   const user = await fetch(`https://dummyjson.com/users/${id}`);
   const userData = await user.json();
 

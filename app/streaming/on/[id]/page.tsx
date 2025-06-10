@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Params } from "@/app/type";
 
 export default async function StreamOn({ params }: Params) {
-  const { id } = await params;
+  const { id } = params;
   const getData = await fetch(`https://dummyjson.com/users/${id}`);
   await delay(2000);
   const user = await getData.json();
