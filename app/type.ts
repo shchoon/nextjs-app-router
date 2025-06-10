@@ -1,4 +1,4 @@
-export type Params = {
+export type PageProps = {
   params: {
     id: number;
   };

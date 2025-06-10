@@ -1,8 +1,8 @@
 import delay from "@/app/utils/delay";
 import Image from "next/image";
-import { Params } from "@/app/type";
+import { PageProps } from "@/app/type";
 
-export default async function StreamOn({ params }: Params) {
+export default async function StreamOn({ params }: PageProps) {
   const { id } = params;
   const getData = await fetch(`https://dummyjson.com/users/${id}`);
   await delay(2000);
