@@ -4,11 +4,9 @@ import SearchName from "@/app/component/search";
 export default async function Sequential({
   params,
 }: {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = params;
+  const { id } = await params;
   const user = await fetch(`https://dummyjson.com/users/${id}`);
   const userData = await user.json();
 

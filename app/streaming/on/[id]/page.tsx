@@ -4,11 +4,9 @@ import Image from "next/image";
 export default async function StreamOn({
   params,
 }: {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = params;
+  const { id } = await params;
   const getData = await fetch(`https://dummyjson.com/users/${id}`);
   await delay(2000);
   const user = await getData.json();

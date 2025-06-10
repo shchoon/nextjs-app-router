@@ -4,20 +4,22 @@ import Delay from "@/app/utils/delay";
 export default async function ParallelOn({
   params,
 }: {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = params;
+  const { id } = await params;
   const getNameList = async () => {
-    const getData = await fetch(`https://dummyjson.com/users/${id * 10}`);
+    const getData = await fetch(
+      `https://dummyjson.com/users/${Number(id) * 10}`
+    );
     await Delay(1000);
     const data = await getData.json();
     return data;
   };
 
   const getAgeList = async () => {
-    const getData = await fetch(`https://dummyjson.com/users?limit=${id + 5}`);
+    const getData = await fetch(
+      `https://dummyjson.com/users?limit=${Number(id) + 5}`
+    );
     await Delay(2000);
     const data = await getData.json();
     return data.users;
