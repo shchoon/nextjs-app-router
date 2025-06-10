@@ -1,8 +1,13 @@
-import { PageProps } from "@/app/type";
 import List from "@/app/component/list";
 import Delay from "@/app/utils/delay";
 
-export default async function ParallelOn({ params }: PageProps) {
+export default async function ParallelOn({
+  params,
+}: {
+  params: {
+    id: number;
+  };
+}) {
   const { id } = params;
   const getNameList = async () => {
     const getData = await fetch(`https://dummyjson.com/users/${id * 10}`);
