@@ -5,7 +5,7 @@ export default async function Sequential({
   params,
 }: {
   params: {
-    id: number;
+    id: string;
   };
 }) {
   const { id } = params;

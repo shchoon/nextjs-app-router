@@ -5,7 +5,7 @@ export default async function ParallelOn({
   params,
 }: {
   params: {
-    id: number;
+    id: string;
   };
 }) {
   const { id } = params;

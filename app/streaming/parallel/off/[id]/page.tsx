@@ -5,7 +5,7 @@ export default async function ParallelOff({
   params,
 }: {
   params: {
-    id: number;
+    id: string;
   };
 }) {
   const { id } = params;

@@ -1,6 +1,6 @@
 export type PageProps = {
   params: {
-    id: number;
+    id: string;
   };
 };
 export type User = {

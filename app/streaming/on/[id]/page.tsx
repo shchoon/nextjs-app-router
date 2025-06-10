@@ -1,12 +1,11 @@
 import delay from "@/app/utils/delay";
 import Image from "next/image";
-import { PageProps } from "@/app/type";
 
 export default async function StreamOn({
   params,
 }: {
   params: {
-    id: number;
+    id: string;
   };
 }) {
   const { id } = params;
